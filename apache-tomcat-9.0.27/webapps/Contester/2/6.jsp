@@ -92,7 +92,7 @@
 						<input type="submit" value="Отправить" onclick="return Start(this);" />
 					</form>
 				</div>
-				<div id="down2"></div>
+				<button onclick="viewCode(document, page_number)">Мои посылки</button>				<div id="down2"></div>
 			</div>
 		</div>
 	</body>

@@ -81,7 +81,7 @@
 					</form>
 				</div>
 				<button onclick="document.location.href='1_solution.jsp'">Решение</button>
-				<div id="down2"></div>
+				<button onclick="viewCode(document, page_number)">Мои посылки</button>				<div id="down2"></div>
 			</div>
 		</div>
 	</body>
