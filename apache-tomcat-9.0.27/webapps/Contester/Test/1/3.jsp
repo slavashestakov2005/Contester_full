@@ -13,7 +13,7 @@
 		<script>
 			var cnt = -1;
 			var page_type = "task";
-			var page_number = 1;
+			var page_number = 3;
 			var page_contest = 1;
 			Check(document, page_contest);
 		</script>
@@ -37,40 +37,23 @@
 		<div id="page">
 			<iframe src="sidebar.html" width="150px" height="100%" scrolling="no" frameborder="no" style="position: absolute;">Список задач</iframe>"
 			<div id="content">
-				<center><h2>A+B</h2></center>
+				<center><h2>Задача №3</h2></center>
 				<center>(Время: 1 сек. Память: 16 Мб)</center>
 				<h3>Условие:</h3>
-				<p>Вводятся числа A и B. Выведите их сумму.</p>
-				<h3>Входные данные:</h3>
-				<p>Два целых числа, таких что \( |A| \leq 10^9 \) и \( |B| \leq 10^9 \).</p>
-				<h3>Выходные данные:</h3>
-				<p>Выведите одно число, сумму входных чисел.</p>
-				<h3>Примеры:</h3>
-				<table border="1" width="95%">
-					<tr>
-						<td width="50%"><center>Input</center></td>
-						<td width="50%"><center>Output</center></td>
-					</tr>
-					<tr>
-						<td>
-							<p>2 3</p>
-						</td>
-						<td>
-							<p>5</p>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p>0 5</p>
-						</td>
-						<td>
-							<p>5</p>
-						</td>
-					</tr>
-				</table>
+				<p>В контестере можно использовать HTML.</p>
+				<p>В частности можно делать ссылки:</p>
+				<p><a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F_%D0%BF%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C">Сделайте калькуляятор по этой инструкции.</a></p>
+				<p>Или картинки.</p>
+				<p><img src="../../Images/edit.png"></p>
+				<p>Также html код можно выводить в исходном виде:</p>
+				<p><script>document.write(ToCorrectText("<i> Не курсивный текст </i>"));</script></p>
+				<p><i>Курсивный текст</i></p>
+				<p>Для этого нужно написать:</p>
+				<p>document.write(ToCorrectText("<script>document.write(ToCorrectText("<i> Не курсивный текст </i>"));</script>"));</p>
+				<p>Это должно располагаться внутри тега script.</p>
 				<div id="code">
 					<p>Решение:</p>
-					<% out.print("<form action=\"../run?contest=1&task=1&name="); %>${cookie['name'].getValue()}<% out.print("&surname="); %>${cookie['surname'].getValue()}<% out.print("\" method=\"post\">"); %>
+					<% out.print("<form action=\"../../run?contest=1&task=3&name="); %>${cookie['name'].getValue()}<% out.print("&surname="); %>${cookie['surname'].getValue()}<% out.print("\" method=\"post\">"); %>
 						<textarea id="code_text" name="code" placeholder="Введите код" oninput="textInput(document)"></textarea>
 						<br/>
 						<input id="code_file" type="file" oninput="codeInput(document, 'file');" onchange="readFile(document);"/>
@@ -81,7 +64,6 @@
 						<input type="submit" value="Отправить" onclick="return Start(this);" />
 					</form>
 				</div>
-				<button onclick="document.location.href='1_solution.jsp'">Решение</button>
 				<button onclick="viewCode(document, page_number)">Мои посылки</button>				<div id="down2"></div>
 			</div>
 		</div>

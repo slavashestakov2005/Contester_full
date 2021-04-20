@@ -13,7 +13,7 @@
 		<script>
 			var cnt = -1;
 			var page_type = "task";
-			var page_number = 3;
+			var page_number = 2;
 			var page_contest = 1;
 			Check(document, page_contest);
 		</script>
@@ -37,23 +37,21 @@
 		<div id="page">
 			<iframe src="sidebar.html" width="150px" height="100%" scrolling="no" frameborder="no" style="position: absolute;">Список задач</iframe>"
 			<div id="content">
-				<center><h2>Задача №3</h2></center>
-				<center>(Время: 1 сек. Память: 16 Мб)</center>
+				<center><h2>Задача №2</h2></center>
+				<center>(Время: 0.001 сек. Память: 1 Мб)</center>
 				<h3>Условие:</h3>
-				<p>В контестере можно использовать HTML.</p>
-				<p>В частности можно делать ссылки:</p>
-				<p><a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F_%D0%BF%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C">Сделайте калькуляятор по этой инструкции.</a></p>
-				<p>Или картинки.</p>
-				<p><img src="../../Images/edit.png"</p>
-				<p>Также html код можно выводить в исходном виде:</p>
-				<p><script>document.write(ToCorrectText("<i> Не курсивный текст </i>"));</script></p>
-				<p><i>Курсивный текст</i></p>
-				<p>Для этого нужно написать:</p>
-				<p>document.write(ToCorrectText("<script>document.write(ToCorrectText("<i> Не курсивный текст </i>"));</script>"));</p>
-				<p>Это должно располагаться внутри тега script.</p>
+				<p>В задачах можно использовать \( \LaTeX{} \).</p>
+				<p>Он находится между символами \ ( и \ ) (без пробела между ними).</p>
+				<p>Часто используемые символы в \( \LaTeX \):</p>
+				<p>\( \alpha \) — \alpha — и другие греческие буквы.</p>
+				<p>\( \frac{a}{b} \) — \frac{a}{b} — дроби.</p>
+				<p>\( a^{b} и a_b \) — a^{b} и a_b — стпени и индексы.</p>
+				<p>\( \leq и \geq \) — \leq и \geq — знаки сравнения.</p>
+				<p>\( \prime \) — \prime — одинарная кавычка.</p>
+				<p>\( \dotso \) — \dotso — один из видов многоточия.</p>
 				<div id="code">
 					<p>Решение:</p>
-					<% out.print("<form action=\"../run?contest=1&task=3&name="); %>${cookie['name'].getValue()}<% out.print("&surname="); %>${cookie['surname'].getValue()}<% out.print("\" method=\"post\">"); %>
+					<% out.print("<form action=\"../../run?contest=1&task=2&name="); %>${cookie['name'].getValue()}<% out.print("&surname="); %>${cookie['surname'].getValue()}<% out.print("\" method=\"post\">"); %>
 						<textarea id="code_text" name="code" placeholder="Введите код" oninput="textInput(document)"></textarea>
 						<br/>
 						<input id="code_file" type="file" oninput="codeInput(document, 'file');" onchange="readFile(document);"/>

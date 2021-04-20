@@ -13,7 +13,7 @@
 		<script>
 			var cnt = -1;
 			var page_type = "task";
-			var page_number = 2;
+			var page_number = 1;
 			var page_contest = 1;
 			Check(document, page_contest);
 		</script>
@@ -37,21 +37,40 @@
 		<div id="page">
 			<iframe src="sidebar.html" width="150px" height="100%" scrolling="no" frameborder="no" style="position: absolute;">Список задач</iframe>"
 			<div id="content">
-				<center><h2>Задача №2</h2></center>
-				<center>(Время: 0.001 сек. Память: 1 Мб)</center>
+				<center><h2>A+B</h2></center>
+				<center>(Время: 1 сек. Память: 16 Мб)</center>
 				<h3>Условие:</h3>
-				<p>В задачах можно использовать \( \LaTeX{} \).</p>
-				<p>Он находится между символами \ ( и \ ) (без пробела между ними).</p>
-				<p>Часто используемые символы в \( \LaTeX \):</p>
-				<p>\( \alpha \) — \alpha — и другие греческие буквы.</p>
-				<p>\( \frac{a}{b} \) — \frac{a}{b} — дроби.</p>
-				<p>\( a^{b} и a_b \) — a^{b} и a_b — стпени и индексы.</p>
-				<p>\( \leq и \geq \) — \leq и \geq — знаки сравнения.</p>
-				<p>\( \prime \) — \prime — одинарная кавычка.</p>
-				<p>\( \dotso \) — \dotso — один из видов многоточия.</p>
+				<p>Вводятся числа A и B. Выведите их сумму :)</p>
+				<h3>Входные данные:</h3>
+				<p>Два целых числа, таких что \( |A| \leq 10^9 \) и \( |B| \leq 10^9 \).</p>
+				<h3>Выходные данные:</h3>
+				<p>Выведите одно число, сумму входных чисел.</p>
+				<h3>Примеры:</h3>
+				<table border="1" width="95%">
+					<tr>
+						<td width="50%"><center>Input</center></td>
+						<td width="50%"><center>Output</center></td>
+					</tr>
+					<tr>
+						<td>
+							<p>2 3</p>
+						</td>
+						<td>
+							<p>5</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>0 5</p>
+						</td>
+						<td>
+							<p>5</p>
+						</td>
+					</tr>
+				</table>
 				<div id="code">
 					<p>Решение:</p>
-					<% out.print("<form action=\"../run?contest=1&task=2&name="); %>${cookie['name'].getValue()}<% out.print("&surname="); %>${cookie['surname'].getValue()}<% out.print("\" method=\"post\">"); %>
+					<% out.print("<form action=\"../../run?contest=1&task=1&name="); %>${cookie['name'].getValue()}<% out.print("&surname="); %>${cookie['surname'].getValue()}<% out.print("\" method=\"post\">"); %>
 						<textarea id="code_text" name="code" placeholder="Введите код" oninput="textInput(document)"></textarea>
 						<br/>
 						<input id="code_file" type="file" oninput="codeInput(document, 'file');" onchange="readFile(document);"/>
@@ -62,6 +81,7 @@
 						<input type="submit" value="Отправить" onclick="return Start(this);" />
 					</form>
 				</div>
+				<button onclick="document.location.href='1_solution.jsp'">Решение</button>
 				<button onclick="viewCode(document, page_number)">Мои посылки</button>				<div id="down2"></div>
 			</div>
 		</div>
